@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        var url = NSURL(string: "https://www.facebook.com/handsomeposeidon")
+        var url = NSURL(string: "https://www.facebook.com/photo.php?fbid=778857885457972&set=a.157669880910112.33698.100000013035811&type=1&theater")
         var request = NSURLRequest(URL: url!)
         webView!.loadRequest(request)
     }
