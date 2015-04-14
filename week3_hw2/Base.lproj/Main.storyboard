@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="week3_hw2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xBv-fy-xqG"/>
+                        <viewControllerLayoutGuide type="bottom" id="5cR-ci-WWY"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" id="zAX-1M-paz">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAX-1M-paz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="669"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="po6-9W-uMW">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="po6-9W-uMW">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <barButtonItem systemItem="stop" id="tmd-cx-YR2">
                                         <connections>
@@ -44,16 +47,17 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="o91-5U-REU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o91-5U-REU">
                                 <rect key="frame" x="16" y="20" width="274" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gro-wi-4tQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gro-wi-4tQ">
                                 <rect key="frame" x="304" y="20" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="RjR-17-jWM"/>
+                                </constraints>
                                 <state key="normal" title="Browse">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -68,6 +72,23 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gro-wi-4tQ" firstAttribute="leading" secondItem="o91-5U-REU" secondAttribute="trailing" constant="14" id="2BP-es-YVs"/>
+                            <constraint firstItem="5cR-ci-WWY" firstAttribute="top" secondItem="po6-9W-uMW" secondAttribute="bottom" id="4Av-KC-aet"/>
+                            <constraint firstItem="o91-5U-REU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DAv-WK-jbi"/>
+                            <constraint firstItem="gro-wi-4tQ" firstAttribute="top" secondItem="o91-5U-REU" secondAttribute="top" id="EOu-Ry-MUc"/>
+                            <constraint firstItem="zAX-1M-paz" firstAttribute="leading" secondItem="po6-9W-uMW" secondAttribute="leading" id="HZv-hT-3Jc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zAX-1M-paz" secondAttribute="bottom" constant="-2" id="Mdh-bP-hsg"/>
+                            <constraint firstItem="po6-9W-uMW" firstAttribute="bottom" secondItem="5cR-ci-WWY" secondAttribute="top" id="R99-Fj-93j"/>
+                            <constraint firstItem="zAX-1M-paz" firstAttribute="trailing" secondItem="po6-9W-uMW" secondAttribute="trailing" id="UX7-7f-Yi0"/>
+                            <constraint firstItem="gro-wi-4tQ" firstAttribute="top" secondItem="xBv-fy-xqG" secondAttribute="bottom" id="Vuy-0b-OCD"/>
+                            <constraint firstItem="zAX-1M-paz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="b6L-wh-paD"/>
+                            <constraint firstItem="o91-5U-REU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="kOz-so-VmH"/>
+                            <constraint firstItem="zAX-1M-paz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ldc-U7-Eev"/>
+                            <constraint firstAttribute="trailing" secondItem="zAX-1M-paz" secondAttribute="trailing" id="tmZ-6E-vRO"/>
+                            <constraint firstItem="zAX-1M-paz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ya1-Xb-2cO"/>
+                            <constraint firstItem="gro-wi-4tQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zXe-5v-VGv"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
